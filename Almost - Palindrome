@@ -1,4 +1,4 @@
-class Main {  
+public class Main {  
   public static boolean almostPalindrome(String s){
     char[] charArray = s.toCharArray();
     int n = 0;
