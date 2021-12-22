@@ -1,0 +1,23 @@
+import java.util.HashSet; 
+import java.util.Set;
+
+public class Main {  
+  public static void main(String args[]) { 
+    System.out.println(happy(111)); 
+  } 
+
+  public static boolean happy(int n) {
+    Set<Integer> number = new HashSet<Integer>();
+    
+    while(number.add(n) == true){
+      int sum = 0;
+      while(n > 0){
+        sum += Math.pow(n % 10, 2);
+        n /= 10;
+      }
+        if(sum == 1)
+          return true;
+    }
+      return false;
+  }  
+}
